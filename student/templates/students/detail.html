@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="display: block; text-align:center; margin-left:30%; background-color:gray; border:1 gray solid; width:40%;">
+        <h5> Nom: {{ student.name }} </h2>
+        <h5> Prenom: {{ student.surname }} </h3>
+        <img src="{{ student.pic.url }}" alt=" {{ student.name }} "style ="max-width :250px;">
+        
+    </div>
+  
+{% endblock %}

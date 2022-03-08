@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    
+<table border="yes" width=800px style="margin-left: 20%;">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>details</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.surname }}</td>
+            <td><a href="{% url 'detail' student.slug %}">voir detail</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    
+
+</table>
+   
+    
+
+{% endblock %}
